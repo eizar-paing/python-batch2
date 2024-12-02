@@ -35,3 +35,5 @@ print(x + y)
 
 print(str(x) + z)
 
+list = [1, 2, 3, 4]
+print(list)
