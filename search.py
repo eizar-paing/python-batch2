@@ -27,3 +27,6 @@ while isTrue:
     isTrue = False
 
     
+# enter a number 
+# number must be between 1 and 10
+# ask user repeatedly to enter number until the number is correct 
