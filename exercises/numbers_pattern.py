@@ -18,10 +18,6 @@ for x in range(row, 0, -1):
   print()
 
 
-["Red", "Green", "Red", "Blue", "Green", "Red"]
-
-Result : {"Red": 3, "Green": 2, "Blue": 1}
-
 
 
 

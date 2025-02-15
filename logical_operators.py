@@ -15,6 +15,10 @@
 # 1 0 => true || false => true => 1
 # 1 1 => true || true => true => 1
 
+# NOT (~)
+# 1 => 0
+# 0 => 1
+
 a = 101
 if(a > 1 and a <100) => 
 if (True and False) => False
