@@ -24,6 +24,30 @@ print(n1(3)) # triple
 print(n1(4)) # quadruple
 
 
+models = [
+  {'make': 'Nokia', 'model': 216, 'color': 'Black'}, 
+  {'make': 'Mi Max', 'model': 2, 'color': 'Gold'}, 
+  {'make': 'Samsung', 'model': 7, 'color': 'Blue'}
+]
+
+sorted_models = sorted(models, key=lambda x: x['color'])
+# models.sort(key=lambda x: x['color'])
+print(sorted_models)
+
+# lambda x = {'make': 'Nokia', 'model': 216, 'color': 'Black'} => 'Black'
+# lambda x = {'make': 'Mi Max', 'model': 2, 'color': 'Gold'} => 'Gold'
+# lambda x = {'make': 'Samsung', 'model': 7, 'color': 'Blue'} => 'Blue'
+
+
+# 'Black', 'Blue', 'Gold'
+# {'make': 'Nokia', 'model': 216, 'color': 'Black'}, {'make': 'Samsung', 'model': 7, 'color': 'Blue'}, {'make': 'Mi Max', 'model': 2, 'color': 'Gold'}
+
+
+
+
+
+
+
 
 
 
