@@ -1,13 +1,35 @@
-class Student:
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
 
-  def __init__(self, p_name, p_age):
-    self.name = p_name
-    self.age = p_age
+  def printname(self):
+    print(self.firstname, self.lastname)
 
-student1 = Student("Mg Mg", 12)
-student2 = Student("May", 13)
-student3 = Student("Nyi Nyi", 12)
+class Student(Person):
+  def __init__(self, fname, lname, year):
+    super().__init__(fname, lname)
+    self.graduationyear = year
 
-print(student1.name, " and ", student1.age)
-print(student2.name, " and ", student2.age)
-print(student3.name, " and ", student3.age)
+  def welcome(self):
+    print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+    
+   
+class Teacher(Person):
+  def __init__(self, fname, lname, address):
+    super().__init__(fname, lname)
+    self.address = address
+
+  def printname(self):
+    super().printname()
+    print("Address : ", self.address)
+
+x = Student("Mike", "Olsen", 2024)
+x.printname()
+x.welcome()
+
+y = Person("John", "Doe")
+y.printname()
+
+z = Teacher("Mary", "Brown")
+z.printname()
