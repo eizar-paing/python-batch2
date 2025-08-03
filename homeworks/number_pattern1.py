@@ -436,15 +436,148 @@ for i in range(1, 11):
   #  1    2    4    8   16   32   64  128   
 
 print("............ ")
-for i in range(1, 9):
-  # increment
-  for j in range( , , 1):
-    print(format(2 ** j, "5d"), end='')
-  # decrement
-  for j in range(i - 1 , -1, -1):
-    print(format(2 ** j, "5d"), end='')
+# for i in range(1, 9):
+#   # increment
+#   for j in range( , , 1):
+#     print(format(2 ** j, "5d"), end='')
+#   # decrement
+#   for j in range(i - 1 , -1, -1):
+#     print(format(2 ** j, "5d"), end='')
+#   print()
+
+
+
+# 12 
+# 12 10 
+# 12 10 8
+# 12 10 8 6
+# 12 10 8 6 4
+# 12 10 8 6 4 2
+
+# 10 
+# 10 8
+# 10 8 6
+# 10 8 6 4
+# 10 8 6 4 2
+
+rows = 6
+num = rows * 2
+p = num
+
+for i in range(1, rows + 1):
+  for j in range(0, i):
+    print(format(p, '3d'), end="")
+    p -= 2
+  print()
+  p = num
+
+# rows = 4, number = 8
+# rows = 5, number = 10
+# rows = 6, number = 12
+# rows = 7, number = 14
+
+# 0  
+# 0  1  
+# 0  2  4  
+# 0  3  6   9  
+# 0  4  8   12  16  
+# 0  5  10  15  20  25  
+# 0  6  12  18  24  30  36
+
+rows = 7
+
+for i in range(0, rows):
+  for j in range(0, i + 1):
+    print(format(i * j, '4d'), end='')
   print()
 
+# i = 0 , j = 0
+# i = 1 , j = 0, 1
+# i = 2 , j = 0, 1, 2
+# i = 3 , j = 0, 1, 2, 3
 
 
+# 5 4 3 2 1 1 2 3 4 5 
 
+# 5 4 3 2     2 3 4 5 
+
+# 5 4 3         3 4 5 
+
+# 5 4             4 5 
+
+# 5                 5
+
+rows = 5
+for i in range(1, rows+1):
+  for j in range(rows, i-1, -1):
+    print(j, end='')
+  for k in range(i):
+    print('  ', end='')
+  for l in range(i, rows +1):
+    print(l, end='')
+  print()
+  
+# 1 * 2 * 3 * 4 
+
+# 1 * 2 * 3 
+
+# 1 * 2 
+
+# 1
+
+rows = 4
+for i in range(rows, 0, -1):
+  for j in range(1, i +1):
+    print(j, end='')
+    if(j != i):
+      print('*', end='')
+  print()
+
+# 1 
+# 2 3 4 
+# 5 6 7 8 9
+
+# 1, 3, 5, 7
+
+rows = 3
+num = 1
+for i in range(1, rows + 1):
+  for j in range(2*i-1):
+    print(num, end='')
+    num += 1
+  print('')
+
+
+# 0 
+# 2 4 
+# 4 8 8 
+# 8 16 16 16
+
+# 0
+# 1 2
+# 2 3 3
+# 3 4 4 4
+
+rows = 4
+num = 0
+for i in range(0, rows):
+  for j in range(i+1):
+    print(format(num, '3d'), end='')
+    num = 2 ** (i + 1)
+  print()
+
+# a = 2 * 1 + 4 = 6
+# b = 5 + 2 * 3 = 
+
+# 1 
+# 2 3 
+# 4 5 6 
+# 7 8 9 10
+
+rows = 4
+num = 1
+for i in range(1, rows + 1):
+  for j in range(i):
+    print(num, end='')
+    num += 1
+  print()
